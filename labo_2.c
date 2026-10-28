@@ -37,8 +37,9 @@ void task2() {
 void task3() {
     setlocale(LC_ALL, "RUS");
 
-    int n = 3;
-    int L = 333;
+    // 13 вариант
+    int L = 133;
+    int n = 2;
 
     printf("Дано:\n");
     printf("%10d\n", n);
@@ -46,8 +47,7 @@ void task3() {
     printf("      ___________\n");
     printf("Ответ:\n");
 
-    
-    printf("%+04d%c%03d\n", 0, '.', (int)(((float)n / L) * 1000));
+    printf("%+03d%c%04d\n", 0, '.', (int)(((float)n / L) * 10000));
 }
 
 int main() {
