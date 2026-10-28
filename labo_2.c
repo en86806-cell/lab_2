@@ -3,6 +3,7 @@
 
 void task1() {
     setlocale(LC_ALL, "RUS");
+
     printf("1) 123\n");
     printf("2)\n1\n2\n3\n");
     printf("3)\n\t1\n\t\t2\n\t\t\t3\n");
@@ -22,7 +23,9 @@ void task1() {
 
 void task2() {
     setlocale(LC_ALL, "RUS");
+
     int N = 14, K = 37;
+
     printf("1) Сейчас %d часов %d минут 00 секунд\n", N, K);
     printf("2) Идет %d минута суток\n", N * 60 + K);
     printf("3) До полуночи осталось %d часов и %d минут\n", 23 - N, 59 - K);
@@ -33,21 +36,26 @@ void task2() {
 
 void task3() {
     setlocale(LC_ALL, "RUS");
+
     int n = 3;
     int L = 333;
-    
+
     printf("Дано:\n");
     printf("%10d\n", n);
     printf("%10d\n", L);
-    printf("\nОтвет:\n");
-    printf("%-+10.3f\n", (float)n / L);
-    printf("\n");
+    printf("      ___________\n");
+    printf("Ответ:\n");
+
+    
+    printf("%+04d%c%03d\n", 0, '.', (int)(((float)n / L) * 1000));
 }
 
 int main() {
     setlocale(LC_ALL, "RUS");
+
     task1();
     task2();
     task3();
+
     return 0;
 }
